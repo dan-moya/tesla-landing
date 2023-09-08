@@ -1,0 +1,44 @@
+---
+import Section from "./Section.astro";
+
+---
+
+<Section
+    title="Model X"
+    subtitle="From $68,590*"
+    textSubtitle="After Federal Tax Credit & Est. Gas Savings"
+    color="black"
+>
+    <div slot="footer">
+        <div class="pb-9">
+            <div class="flex flex-row gap-7 justify-center">
+                <a
+                    href="#"
+                    class="bg-slate-200 opacity-95 text-sm rounded font-medium text-black px-[92px] py-2.5 inline-block"
+                >
+                    <span>Order Now</span>
+                </a>
+                <a
+                    href="#"
+                    class="bg-neutral-800 opacity-95 text-sm rounded font-medium text-white px-[92px] py-2.5 inline-block"
+                >
+                    <span>Demo Drive</span>
+                </a>
+            </div>
+        </div>
+        <div class="text-current text-xs pb-4 text-center">
+            <p>
+                *Price before incentives and savings is $79,990, excluding taxes and fees. Subject to change.
+                <br />
+                <a href="#" class="underline">Learn about est. gas savings.</a>
+            </p>
+        </div>
+    </div>
+
+    <img
+        slot="background"
+        src="/model-x.avif"
+        alt="Model X"
+        class="h-full w-full object-cover object-center"
+    />
+</Section>
