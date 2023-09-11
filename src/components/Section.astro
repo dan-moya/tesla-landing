@@ -1,5 +1,5 @@
 ---
-const { color, title, subtitle, textSubtitle } = Astro.props
+const { color, title, subtitle, textSubtitle, subtitleSize  } = Astro.props
 const textColor = `text-${color}`
 ---
 <section
@@ -7,10 +7,15 @@ const textColor = `text-${color}`
     data-header-color={color}
 >
 	<div class="z-30 relative h-full flex flex-col">
-		<header>
-			<h1 class={`dark:${textColor} pt-40 text-[40px] font-medium`}>{title}</h1>
-			<p class={`dark:${textColor} text-base`}>
-				<strong class="text-xl">{subtitle}</strong><br />
+		<header class="opacity-80">
+			<h1 class={`dark:${textColor} pt-[88px] text-[40px] font-medium`}>{title}</h1>
+			<p class={`dark:${textColor} text-base leading-none`}>
+				{subtitleSize === 'small' ? (
+					<span class="text-sm">{subtitle}</span>
+				) : (
+					<strong class="text-xl">{subtitle}</strong>
+				)}
+				<br />
 				<sub class="text-xs">{textSubtitle}</sub>
 			</p>
 		</header>

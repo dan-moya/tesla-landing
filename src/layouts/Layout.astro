@@ -61,4 +61,34 @@ const { title } = Astro.props;
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
+
+	/* Estilos de scroll solo para portátiles y computadoras */
+	@media (min-width: 768px) {
+		/* width */
+		::-webkit-scrollbar {
+			width: 10px;
+		}
+		
+		/* Track */
+		::-webkit-scrollbar-track {
+			background: #f1f1f1;
+		}
+		
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+			background: #888;
+			border-radius: 5px;
+		}
+		
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+			background: #555;
+		}
+	}
+
+	/* Estilos para dispositivos móviles (teléfonos y tablets) */
+	@media (max-width: 767px) {
+		/** opcionales */
+	}
+
 </style>
